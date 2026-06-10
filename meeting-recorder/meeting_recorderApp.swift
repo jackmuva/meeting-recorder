@@ -11,7 +11,7 @@ import SwiftUI
 struct meeting_recorderApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeView()
         }
     }
 }
