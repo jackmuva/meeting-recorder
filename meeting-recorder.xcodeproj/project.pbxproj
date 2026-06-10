@@ -6,13 +6,77 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EC6D69892FD8EC4D0069FD80 /* PlaudDeviceBasicSDK.bundle in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = EC6D69882FD8EC4D0069FD80 /* PlaudDeviceBasicSDK.bundle */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EC6D697E2FD8EC140069FD80 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6D69862FD8EC360069FD80 /* Embed PlugIns */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				EC6D69892FD8EC4D0069FD80 /* PlaudDeviceBasicSDK.bundle in Embed PlugIns */,
+			);
+			name = "Embed PlugIns";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		EC1B201F2FD89C7200609D09 /* meeting-recorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "meeting-recorder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6D69882FD8EC4D0069FD80 /* PlaudDeviceBasicSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = PlaudDeviceBasicSDK.bundle; path = ios/PlaudDeviceBasicSDK.bundle; sourceTree = "<group>"; };
+		EC6D698A2FD8EC620069FD80 /* PlaudBleSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlaudBleSDK.framework; sourceTree = "<group>"; };
+		EC6D698B2FD8EC620069FD80 /* PlaudDeviceBasicSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PlaudDeviceBasicSDK.bundle; sourceTree = "<group>"; };
+		EC6D698C2FD8EC620069FD80 /* PlaudDeviceBasicSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlaudDeviceBasicSDK.framework; sourceTree = "<group>"; };
+		EC6D698D2FD8EC620069FD80 /* PlaudWiFiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlaudWiFiSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		EC6D69812FD8EC150069FD80 /* Exceptions for "meeting-recorder" folder in "Embed Frameworks" phase from "meeting-recorder" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				"plaud-sdk/PlaudBleSDK.framework" = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				"plaud-sdk/PlaudDeviceBasicSDK.framework" = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+				"plaud-sdk/PlaudWiFiSDK.framework" = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+			};
+			buildPhase = EC6D697E2FD8EC140069FD80 /* Embed Frameworks */;
+			membershipExceptions = (
+				"plaud-sdk/PlaudBleSDK.framework",
+				"plaud-sdk/PlaudDeviceBasicSDK.framework",
+				"plaud-sdk/PlaudWiFiSDK.framework",
+			);
+		};
+		EC6D69872FD8EC370069FD80 /* Exceptions for "meeting-recorder" folder in "Embed PlugIns" phase from "meeting-recorder" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				"plaud-sdk/PlaudDeviceBasicSDK.bundle" = (CodeSignOnCopy, RemoveHeadersOnCopy, );
+			};
+			buildPhase = EC6D69862FD8EC360069FD80 /* Embed PlugIns */;
+			membershipExceptions = (
+				"plaud-sdk/PlaudDeviceBasicSDK.bundle",
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EC1B20212FD89C7200609D09 /* meeting-recorder */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EC6D69812FD8EC150069FD80 /* Exceptions for "meeting-recorder" folder in "Embed Frameworks" phase from "meeting-recorder" target */,
+				EC6D69872FD8EC370069FD80 /* Exceptions for "meeting-recorder" folder in "Embed PlugIns" phase from "meeting-recorder" target */,
+			);
 			path = "meeting-recorder";
 			sourceTree = "<group>";
 		};
@@ -33,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				EC1B20212FD89C7200609D09 /* meeting-recorder */,
+				EC6D69842FD8EC360069FD80 /* Frameworks */,
 				EC1B20202FD89C7200609D09 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +110,27 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		EC6D69842FD8EC360069FD80 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC6D698E2FD8EC620069FD80 /* plaud-sdk */,
+				EC6D69882FD8EC4D0069FD80 /* PlaudDeviceBasicSDK.bundle */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC6D698E2FD8EC620069FD80 /* plaud-sdk */ = {
+			isa = PBXGroup;
+			children = (
+				EC6D698A2FD8EC620069FD80 /* PlaudBleSDK.framework */,
+				EC6D698B2FD8EC620069FD80 /* PlaudDeviceBasicSDK.bundle */,
+				EC6D698C2FD8EC620069FD80 /* PlaudDeviceBasicSDK.framework */,
+				EC6D698D2FD8EC620069FD80 /* PlaudWiFiSDK.framework */,
+			);
+			name = "plaud-sdk";
+			path = "meeting-recorder/plaud-sdk";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -55,6 +141,8 @@
 				EC1B201B2FD89C7200609D09 /* Sources */,
 				EC1B201C2FD89C7200609D09 /* Frameworks */,
 				EC1B201D2FD89C7200609D09 /* Resources */,
+				EC6D697E2FD8EC140069FD80 /* Embed Frameworks */,
+				EC6D69862FD8EC360069FD80 /* Embed PlugIns */,
 			);
 			buildRules = (
 			);
@@ -251,10 +339,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/meeting-recorder/ios",
+					"$(PROJECT_DIR)/meeting-recorder/plaud-sdk",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -286,10 +376,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
 				ENABLE_PREVIEWS = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/meeting-recorder/ios",
+					"$(PROJECT_DIR)/meeting-recorder/plaud-sdk",
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
